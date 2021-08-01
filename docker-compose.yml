@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  django:
+    build: .
+    container_name: django
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    entrypoint: ["sh", "init.sh"]
